@@ -21,7 +21,7 @@ print(filter_by_state(inform_state))
 
 
 def sort_by_date(inform_states: list[dict[str, Any]], reverse: bool = True) -> list[dict[str, Any]]:
-    """Функция фильтрации операций по ключу state"""
+    """Функция Функции сортировки операций по дате"""
     sorted_inform_state = sorted(inform_states, key=lambda inform_states: inform_states['date'], reverse=reverse)
     return sorted_inform_state
 
