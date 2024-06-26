@@ -21,9 +21,19 @@ pip install -r requirements.txt
 run processing.py
 ```
 
+Cгенерировать отчет о покрытии в HTML-формате: 
+```
+pytest --cov=src --cov-report=html
+```
+
 Запустите локальный сервер:
 ```
 python manage.py runserver
+```
+
+Запустите проверку тестов:
+```
+pytest tests/
 ```
 
 ## Использование:
