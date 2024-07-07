@@ -10,7 +10,7 @@ def test_log_terminal_ok(capsys: Any) -> None:
 
     example([1])
     capture = capsys.readouterr()
-    assert capture.out == "my_function ok \n\n"
+    assert capture.out == "my_function ok \n"
 
 
 def test_log_terminal_error(capsys: Any) -> None:
@@ -20,4 +20,4 @@ def test_log_terminal_error(capsys: Any) -> None:
 
     example_2(0)
     capture = capsys.readouterr()
-    assert capture.out == "my_function error: 'int' object is not subscriptable. Inputs: (0,), {} \n\n"
+    assert capture.out == "my_function error: 'int' object is not subscriptable. Inputs: (0,), {} \n"
