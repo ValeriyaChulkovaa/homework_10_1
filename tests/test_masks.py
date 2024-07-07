@@ -1,23 +1,37 @@
 import pytest
 
-
-@pytest.mark.parametrize("x", [7000792289606361, 8000522289606361, 700792289606361, ()])
-def test_get_mask_card_number(x):
-    card_number_str = str(x)
-    return f"{card_number_str[:4]} {card_number_str[4:6]}** **** {card_number_str[-4:]}"
+from src.masks import mask_account_card
 
 
-assert test_get_mask_card_number(7000792289606361) == "7000 79** **** 6361"
-assert test_get_mask_card_number(8000522289606361) == "8000 79** **** 6361"
-assert test_get_mask_card_number(700792289606361) == "7007 79** **** 6361"
+def test_mask_card_visa_platinum(visa_platinum_card: str, mask_visa_platinum_card: str) -> None:
+    assert mask_account_card(visa_platinum_card) == mask_visa_platinum_card
 
 
-@pytest.mark.parametrize("x", [73654108430135874305, 773654108430135874305, 3373654108430135874305, ()])
-def test_get_mask_account(x):
-    account_number_str = str(x)
-    return f"**{account_number_str[-4:]}"
+def test_mask_card_maestro(maestro_card: str, mask_maestro_card: str) -> None:
+    assert mask_account_card(maestro_card) == mask_maestro_card
 
 
-assert test_get_mask_account(73654108430135874305) == "**4305"
-assert test_get_mask_account(773654108430135874305) == "**4305"
-assert test_get_mask_account(3373654108430135874305) == "**4305"
+def test_mask_card_master(master_card: str, mask_master_card: str) -> None:
+    assert mask_account_card(master_card) == mask_master_card
+
+
+def test_mask_card_visa_classic(visa_classic_card: str, mask_visa_classic_card: str) -> None:
+    assert mask_account_card(visa_classic_card) == mask_visa_classic_card
+
+
+def test_mask_account(account_num: str, mask_account_num: str) -> None:
+    assert mask_account_card(account_num) == mask_account_num
+
+
+@pytest.mark.parametrize(
+    "card, mask_card",
+    [
+        ("Visa Classic 6831 9824 7673 7658", "Visa Classic 6831 98** **** 7658"),
+        ("MasterCard 7158 3007 3472 6758", "MasterCard 7158 30** **** 6758"),
+        ("Maestro 1596 8378 6870 5199", "Maestro 1596 83** **** 5199"),
+        ("Visa Platinum 7000 7922 8960 6361", "Visa Platinum 7000 79** **** 6361"),
+        ("Счет 35383033474447895560", "Счет **5560"),
+    ],
+)
+def test_mask_cards(card: str, mask_card: str) -> None:
+    assert mask_account_card(card) == mask_card
