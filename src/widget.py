@@ -1,12 +1,16 @@
-from typing import Any
+from .masks import get_masked_number
 
 
-def get_data(data_today: str) -> Any:
-    """Реализация функции, которая возвращает измененную дату"""
-    if str(len(data_today)) == '26':
-        return f"{data_today[8:10]}.{data_today[5:7]}.{data_today[:4]}"
-    else:
-        return None
+def hide_card_details(bank_card: str) -> str:
+    """Функция, которая возвращает исходную строку с замаскированным номером карты/счета"""
+    card_parts = bank_card.split()
+    card_parts[-1] = get_masked_number(card_parts[-1])
+    return " ".join(card_parts)
 
 
-print(get_data('2018-07-11T02:26:18.671407'))
+def get_date(date: str) -> str:
+    """Функция, которая принимает на вход дату и выводит в необходимом формате"""
+    desired_date = date[:10]
+    format_the_date = desired_date.split("-")
+    year, month, day = format_the_date
+    return f"{day}.{month}.{year}"
