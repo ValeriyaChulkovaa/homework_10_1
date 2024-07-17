@@ -26,4 +26,3 @@ def test_get_masked_other():
     assert get_masked_number(12398776548) == "Введите 16-значное или 20-значное число"
     assert get_masked_number("1239877654868") == "Введите 16-значное или 20-значное число"
     assert get_masked_number("Visa Platinum 7000792289608765") == "Введите 16-значное или 20-значное число"
-    

@@ -37,4 +37,3 @@ def test_get_transactions_from_excel(mock_read_excel, transactions):
     mock_read_excel.return_value.to_dict.return_value = transactions
     assert get_transactions_from_file("data/transactions.xlsx") == transactions
     mock_read_excel.assert_called_once_with("data/transactions.xlsx")
-    

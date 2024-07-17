@@ -40,4 +40,3 @@ def test_log_with_error():
         log_content = file.read()
     assert "test_func error: ValueError" in log_content
     assert "Inputs: (1, 2), {}" in log_content
-    

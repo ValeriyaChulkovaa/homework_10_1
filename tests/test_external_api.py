@@ -34,4 +34,3 @@ def test_get_transaction_amount_in_rubles_unknown_currency(mock_get):
     with unittest.TestCase().assertRaises(ValueError) as context:
         get_transaction_amount_in_rubles(transaction)
         assert "Неизвестная валюта JPY." in str(context.exception)
-        

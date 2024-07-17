@@ -46,4 +46,3 @@ if __name__ == "__main__":
     print(f"Сумма в рублях (RUB): {amount_in_rubles1}")
     print(f"Сумма в рублях (USD): {amount_in_rubles2}")
     print(f"Сумма в рублях (EUR): {amount_in_rubles3}")
-    

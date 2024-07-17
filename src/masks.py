@@ -44,4 +44,3 @@ if __name__ == "__main__":
     get_masked_number(70007922896063615674)
 
     get_masked_number(654583)
-    
