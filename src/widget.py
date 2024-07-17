@@ -39,4 +39,3 @@ def get_data(text: str) -> str:
     new_string = text.split("-")
     data_string = new_string[2][0:2] + "." + new_string[1] + "." + new_string[0]
     return data_string
-

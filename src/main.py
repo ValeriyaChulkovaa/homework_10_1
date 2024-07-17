@@ -1,5 +1,5 @@
-from src.processing import filter_by_state, sort_by_date
-from src.widget import get_data, mask_account_card
+from src.ppp import filter_by_state, sort_by_date
+from src.fd import get_data, mask_account_card
 
 if __name__ == "__main__":
     print(mask_account_card("Visa Platinum 7000 7922 8960 6361"))
@@ -21,4 +21,3 @@ if __name__ == "__main__":
 
     print(sort_by_date(operations_list))
     print(sort_by_date(operations_list, False))
-    
