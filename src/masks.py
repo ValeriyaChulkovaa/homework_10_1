@@ -1,29 +1,44 @@
-from typing import Any
+import logging
+
+logger = logging.getLogger("masks")
+logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler("logs/masks.log")
+file_formatter = logging.Formatter(
+    "%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(levelname)s - %(message)s", "%d.%m.%Y %H:%M:%S"
+)
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
 
 
-def mask_account_card(number_card: str) -> Any:
-    """Реализация функций, которые возвращают маскированные номера карт и счетов"""
-    if 'Maestro' in str(number_card):
-        return f"{number_card[:7]} {number_card[8:12]} {number_card[12:14]}** **** {number_card[20:]}"
-    elif 'MasterCard' in str(number_card):
-        return f"{number_card[:10]} {number_card[11:15]} {number_card[15:17]}** **** {number_card[23:]}"
-    elif 'Visa Classic' in str(number_card):
-        return f"{number_card[:4]} {number_card[5:12]} {number_card[13:17]} {number_card[17:19]}** **** {number_card[25:]}"
-    elif 'Visa Platinum' in str(number_card):
-        return f"{number_card[:4]} {number_card[5:13]} {number_card[14:18]} {number_card[18:20]}** **** {number_card[26:]}"
-    elif 'Visa Gold' in str(number_card):
-        return f"{number_card[:4]} {number_card[5:9]} {number_card[10:14]} {number_card[14:16]}** **** {number_card[22:]}"
-    elif 'Счет' in str(number_card) or 'Счёт' in str(number_card):
-        return f"{number_card[:4]} **{number_card[21:]}"
+def get_mask_card_number(card_info: list) -> str:
+    """
+    Функция принимает на вход информацию о карте и возвращает зашифрованную информацию
+    """
+    # Шифруем номер карты
+    logger.info(f"Карта {" ".join(card_info)} передана для зашифрованния")
+    card_info[-1] = f"{card_info[-1][:6]}******{card_info[-1][-4:]}"
+
+    # Оборачиваем номер карты в список для перебора и вставки пробелов
+    list_card_number = list(card_info[-1])
+    counter = 0
+    for index in range(1, len(list_card_number)):
+        if index % 4 == 0:
+            list_card_number.insert(index + counter, " ")
+            counter += 1
+    # Заменяем исходную строку с номером карты на зашифрованную с пробелами
     else:
-        return None
+        card_info[-1] = "".join(list_card_number)
+        logger.info(f"Зашифрованная карта {" ".join(card_info)}")
+
+    return " ".join(card_info)
 
 
-print(mask_account_card('Maestro 1596837868705199'))
-print(mask_account_card('MasterCard 7158300734726758'))
-print(mask_account_card('Visa Classic 6831982476737658'))
-print(mask_account_card('Visa Platinum 8990922113665229'))
-print(mask_account_card('Visa Gold 5999414228426353'))
-print(mask_account_card('Счет 64686473678894779589'))
-print(mask_account_card('Счёт 64686473678894779589'))
+def get_mask_account(account: list) -> str:
+    """
+    Функция принимает на вход информацию о счете и возвращает зашифрованную информацию
+    """
+    logger.info(f"{" ".join(account)} передан для шифровки номера")
+    account[-1] = f"**{account[-1][-2:]}"
+    logger.info(f"Зашифрованный {" ".join(account)}")
 
+    return " ".join(account)
