@@ -1,6 +1,6 @@
 import pytest
 
-from src.fd import get_data, mask_account_card
+from src.widget import get_data, mask_account_card
 
 
 def test_mask_card_visa_platinum(visa_platinum_card: str, mask_visa_platinum_card: str) -> None:
