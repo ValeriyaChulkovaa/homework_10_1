@@ -1,12 +1,22 @@
 from typing import Any
 
 
-def get_data(data_today: str) -> Any:
-    """Реализация функции, которая возвращает измененную дату"""
-    if str(len(data_today)) == '26':
-        return f"{data_today[8:10]}.{data_today[5:7]}.{data_today[:4]}"
+def mask_account_card(number: Any) -> str:
+    """Функция принимает номер карты или номер счета
+    :rtype: object
+    """
+    name_card = ""
+
+    if "Счет " in number or "Счёт " in number:
+        return f"Счет **{number[-4:]}"
     else:
-        return None
+        for i in number:
+            if i.isalpha():
+                name_card += i
+
+        return f"{name_card} {number[-16: -12]} {number[-11:-9]}** **** {number[-4:]}"
 
 
-print(get_data('2018-07-11T02:26:18.671407'))
+def get_data(data: Any) -> str:
+    """Функция преобразования даты"""
+    return f"{data[8:10]}.{data[5:7]}.{data[0:4]}"

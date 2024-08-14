@@ -1,29 +1,26 @@
+import logging
 from typing import Any
 
+from src.config import masks_log
 
-def mask_account_card(number_card: str) -> Any:
-    """Реализация функций, которые возвращают маскированные номера карт и счетов"""
-    if 'Maestro' in str(number_card):
-        return f"{number_card[:7]} {number_card[8:12]} {number_card[12:14]}** **** {number_card[20:]}"
-    elif 'MasterCard' in str(number_card):
-        return f"{number_card[:10]} {number_card[11:15]} {number_card[15:17]}** **** {number_card[23:]}"
-    elif 'Visa Classic' in str(number_card):
-        return f"{number_card[:4]} {number_card[5:12]} {number_card[13:17]} {number_card[17:19]}** **** {number_card[25:]}"
-    elif 'Visa Platinum' in str(number_card):
-        return f"{number_card[:4]} {number_card[5:13]} {number_card[14:18]} {number_card[18:20]}** **** {number_card[26:]}"
-    elif 'Visa Gold' in str(number_card):
-        return f"{number_card[:4]} {number_card[5:9]} {number_card[10:14]} {number_card[14:16]}** **** {number_card[22:]}"
-    elif 'Счет' in str(number_card) or 'Счёт' in str(number_card):
-        return f"{number_card[:4]} **{number_card[21:]}"
-    else:
-        return None
+logger = logging.getLogger("masks")
+logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler(masks_log, "w")
+file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s: %(message)s")
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
 
 
-print(mask_account_card('Maestro 1596837868705199'))
-print(mask_account_card('MasterCard 7158300734726758'))
-print(mask_account_card('Visa Classic 6831982476737658'))
-print(mask_account_card('Visa Platinum 8990922113665229'))
-print(mask_account_card('Visa Gold 5999414228426353'))
-print(mask_account_card('Счет 64686473678894779589'))
-print(mask_account_card('Счёт 64686473678894779589'))
-
+def get_mask_account(number: str) -> Any:
+    """Функция, маскирующая номер счета или карты"""
+    try:
+        logger.info("Проверяем корректность полученных данных и маскируем их")
+        if str(number).isdigit() and len(number) == 16:
+            return f"{number[:4]} {number[4:6]}** **** {number[12:]}"
+        elif str(number).isdigit() and len(number) == 20:
+            return f"**{number[-4::]}"
+        else:
+            logger.info("Выводим сообщение, что данные некорректны")
+            return "Введены некорректные данные"
+    except Exception as ex:
+        logger.error(f"Произошла ошибка: {ex}")
