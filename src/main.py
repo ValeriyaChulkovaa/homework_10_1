@@ -1,86 +1,43 @@
-import sys
-from pathlib import Path
-
-from src.config import ROOT_PATH
-
-sys.path.append(str(Path(__file__).resolve().parent.parent))
 import json
 import logging
-import sys
-from pathlib import Path
 
-from src.utils import read_excel
-from src.services import investment_bank
+from read_excel import read_excel
+from utils import currency_rates, for_each_card, get_price_stock, greetings, top_five_transaction
+from views import filter_by_date
 
-path_to_file = Path(ROOT_PATH, "../data/operations.xlsx")
-
-logger = logging.getLogger("main")
-logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler("../logs/main.log", "w")
-file_formatted = logging.Formatter("%(asctime)s-%(name)s-%(levelname)s: %(message)s")
-file_handler.setFormatter(file_formatted)
+logger = logging.getLogger("utils.log")
+file_handler = logging.FileHandler("main.log", "w")
+file_formatter = logging.Formatter("%(asctime)s %(levelname)s: %(message)s")
+file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
+logger.setLevel(logging.INFO)
 
 
-def main():
-    """Функция упраления проектом"""
-    print(
-        """Добро пожаловать в раздел 'Сервис'
-    Предлагаем ознакомиться с возможностями Инвест-копилки.
-    Хотите знать, сколько денег Вы могли бы отложить в Инвест-копилку за месяц?
-    """
+def main(date: str, file_path: str, stocks: list):
+    """Функция создающая JSON ответ для страницы главная"""
+    logger.info("Начало работы главной функции (main)")
+
+    my_list_trans = read_excel(file_path)
+    final_list = filter_by_date(date, my_list_trans)
+    greeting = greetings()
+    cards = for_each_card(final_list)
+    top_trans = top_five_transaction(final_list)
+    stocks_prices = get_price_stock(stocks)
+    currency_r = currency_rates()
+    logger.info("Создание JSON ответа")
+    date_json = json.dumps(
+        {
+            "greeting": greeting,
+            "cards": cards,
+            "top_transactions": top_trans,
+            "currency_rates": currency_r,
+            "stock_prices": stocks_prices,
+        },
+        indent=4,
+        ensure_ascii=False,
     )
-    while True:
-        es_no = input("Введите 'да' или 'нет': ").lower()
-        if es_no == "да":
-            # Читаем данные из excel-файла
-            transactions = read_excel(path_to_file)
-            # Запрашиваем лимит округления
-            while True:
-                limit = int(
-                    input(
-                        "Выберите комфортную Вам сумму округления остатка для инвесткопилки."
-                        "Введите число 10, 50 или 100: "
-                    )
-                )
-                if limit == 10 or limit == 50 or limit == 100:
-                    print(f"Выбрано округление до {limit} рублей")
-                    break
-                else:
-                    print("Ошибка ввода")
-                    continue
-            # Запрашиваем месяц
-            while True:
-                month_choice = int(
-                    input(
-                        f"Для расчета возьмём 2021 год. Введите порядковый номер месяца от 1 до 12: "
-                    )
-                )
-                if 0 < month_choice < 10:
-                    month = "2021-0" + str(month_choice)
-                    break
-                elif 9 < month_choice < 13:
-                    month = "2021-" + str(month_choice)
-                    break
-                else:
-                    print("Ошибка. Введите число в диапазоне от 1 до 12.")
-                    continue
-            total_investment = investment_bank(month, transactions, limit)
-            logger.info(f"Производим расчет сумм для инвесткопилки")
-            # создаем json-строку
-            data = {"total_investment": total_investment}
-            json_data = json.dumps((data))
-            print(f"Json-ответ: {json_data}")
-            return json_data
-        elif es_no == "нет":
-            print("Хорошо. До встречи!")
-            break
-        else:
-            logger.error("Ошибка")
-            print("Ошибка ввода")
-            continue
+    logger.info("Завершение работы главной функции (main)")
+    return date_json
 
 
-if __name__ == "__main__":
-    main()
-    
+# print(main("2021.11.12", "../data/operations.xlsx", ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]))
