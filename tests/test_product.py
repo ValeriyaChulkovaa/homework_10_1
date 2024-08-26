@@ -28,3 +28,4 @@ def test_product_str(product):
 
 def test_product_add(product_sum_price1, product_sum_price2):
     print(product_sum_price1 + product_sum_price2)
+    
