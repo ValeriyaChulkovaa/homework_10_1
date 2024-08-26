@@ -1,6 +1,3 @@
-import json
-import os
-
 import pytest
 
 from src.category import Category
@@ -8,23 +5,29 @@ from src.product import Product
 
 
 @pytest.fixture
-def apple():
-    return Product(name="Green apple", description="Сезонные 2024 года", price=115.20, quantity=30)
+def first_category():
+    return Category(
+        name="Смартфоны",
+        description="Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+        products=[
+            Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5),
+            Product("Iphone 15", "512GB, Gray space", 210000.0, 8),
+            Product("Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14)
+        ]
+    )
 
 
 @pytest.fixture
-def pineapple():
-    return Product(name="Pineapple", description="Страна-поставщик Коста-Рика", price=460, quantity=10)
+def second_category():
+    return Category(
+        name="Телевизоры",
+        description="Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
+        products=[
+            Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
+        ]
+    )
 
 
 @pytest.fixture
-def category_fruit(apple, pineapple):
-    return Category(name="Fruits", description="Сбор урожая - 2024", products=[apple, pineapple])
-
-
-@pytest.fixture
-def get_data(file_path="../object_orient_programming/data/products.json"):
-    full_path = os.path.abspath(file_path)
-    with open(full_path, "r", encoding="utf-8") as f_obj:
-        result = json.load(f_obj)
-    return result
+def product():
+    return Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)

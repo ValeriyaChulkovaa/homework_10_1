@@ -1,36 +1,27 @@
-from typing import Any
-
-
 class Product:
     name: str
     description: str
     price: float
     quantity: int
 
-    def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
+    def __init__(self, name, description, price, quantity):
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
 
-    @classmethod
-    def new_product(cls, dict_product: dict) -> Any:
-
-        return Product(**dict_product)
-
     @property
-    def price(self) -> float:
+    def price(self):
         return self.__price
 
+    @classmethod
+    def new_product(cls, dict_product):
+        return cls(dict_product['name'], dict_product['description'], dict_product['price'], dict_product['quantity'])
+
     @price.setter
-    def price(self, price_product: int) -> Any:
-        if price_product <= 0:
-            print("Цена не должна быть нулевая или отрицательная")
-        else:
-            if price_product < self.__price:
-                answer = input("Вы действительно хотите понизить цену? y-да/n-нет ")
-                if answer == "y":
-                    self.__price = price_product
-                self.__price = self.__price
-            self.__price = price_product
-            
+    def price(self, new_price: int):
+        if new_price <= 0:
+            print('Цена не должна быть нулевая или отрицательная')
+            return
+        self.__price = new_price
+        
