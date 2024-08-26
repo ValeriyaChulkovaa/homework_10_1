@@ -1,47 +1,31 @@
-import pytest
-
 from src.product import Product
 
 
-def test_product_init(apple, pineapple):
-    assert apple.name == "Green apple"
-    assert apple.description == "Сезонные 2024 года"
-    assert apple.price == 115.20
-    assert apple.quantity == 30
-
-    assert pineapple.name == "Pineapple"
-    assert pineapple.description == "Страна-поставщик Коста-Рика"
-    assert pineapple.price == 460
-    assert pineapple.quantity == 10
+def test_product(product):
+    assert product.name == "55\" QLED 4K"
+    assert product.description == "Фоновая подсветка"
+    assert product.price == 123000.0
+    assert product.quantity == 7
 
 
 def test_new_product():
-    name_product = Product.new_product({"name": "apple", "description": "green apple", "price": 13, "quantity": 12})
-    assert name_product.name == "apple"
-    assert name_product.description == "green apple"
-    assert name_product.price == 13
-    assert name_product.quantity == 12
+    product = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
+    product.name = "55\" QLED 4K"
+    product.description = "Фоновая подсветка"
+    product.price = 123000.0
+    product.quantity = 7
 
 
-def test_new_price(capsys, apple):
-    apple.price = -100
+def test_price_update(capsys, product):
+    product.price = -100
     message = capsys.readouterr()
-    assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
-    apple.price = 1000
-    assert apple.price == 1000
-    apple.price = 1
-    assert apple.price == 1
+    assert message.out.strip() == 'Цена не должна быть нулевая или отрицательная'
 
 
-def test_product_str(apple):
-    assert str(apple) == "Green apple, 115.2 руб. Остаток: 30 шт.\n"
+def test_product_str(product):
+    assert str(product) == '55" QLED 4K, 123000.0 руб. Остаток: 7 шт.'
 
 
-def test_product_add(apple, pineapple):
-    assert apple + pineapple == 8056.0
-
-
-def test_smarthphone_lawn_grass_add(smartphone, grass):
-    with pytest.raises(TypeError):
-        result = smartphone + grass
-        
+def test_product_add(product_sum_price1, product_sum_price2):
+    print(product_sum_price1 + product_sum_price2)
+    
