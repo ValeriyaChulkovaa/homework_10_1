@@ -1,9 +1,29 @@
 import pandas as pd
+from typing import List, Dict
 
-import os
-def read_excel(path_file: str) -> list[dict]:
+
+def read_excel(path_file: str) -> List[Dict[str, Any]]:
     """Функция читает .xlsx файл и возвращает список словарей"""
-    df = pd.read_excel(path_file)
+    try:
+        df = pd.read_excel(path_file)
+    except FileNotFoundError:
+        print(f"Ошибка: Файл '{path_file}' не найден.")
+        return []
+    except Exception as e:
+        print(f"Ошибка при чтении файла: {e}")
+        return []
+
+    # Проверка наличия необходимых столбцов
+    required_columns = [
+        "Дата платежа", "Статус", "Сумма платежа",
+        "Валюта платежа", "Категория", "Описание", "Номер карты"
+    ]
+
+    for column in required_columns:
+        if column not in df.columns:
+            print(f"Ошибка: Столбец '{column}' отсутствует в файле.")
+            return []
+
     result = df.apply(
         lambda row: {
             "Дата платежа": row["Дата платежа"],
@@ -16,4 +36,5 @@ def read_excel(path_file: str) -> list[dict]:
         },
         axis=1,
     ).tolist()
+
     return result
