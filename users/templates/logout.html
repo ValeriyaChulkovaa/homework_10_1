@@ -1,0 +1,11 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Вы успешно вышли из системы</h2>
+    <p>Спасибо за посещение нашего сайта.</p>
+    <a href="{% url 'users:login' %}" class="btn btn-primary">Войти снова</a>
+</div>
+{% endblock %}
