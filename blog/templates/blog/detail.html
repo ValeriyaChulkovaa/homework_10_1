@@ -1,0 +1,39 @@
+{% extends 'catalog/base.html' %}
+{% load my_tag %}
+
+{% block title %}Запись {{ post }} {% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center mt-2 mb-3">
+  <div class="card shadow-sm" style="width: auto;">
+    <div class="card-body">
+      <img src="{{ post.preview | media_filter }}" class="card-img-top d-block mx-auto" alt="Тут изображение" style="width: auto; height: 500px;">
+      <hr class="mt-4">
+      <p class="card-text">Заголовок: {{ post }}</p>
+      <hr>
+      {% if post.content %}
+        <p class="card-text">Содержание: {{ post.content }}</p>
+<!--        <p class="card-text">{{ post.content }}</p>-->
+      {% else %}
+        <p>Содержание отсутствует.</p>
+      {% endif %}
+      <hr>
+      <p class="card-text">Дата создания - {{ post.created_at }}</p>
+      <hr>
+      <p class="card-text">Признак публикации - {{ post.is_published }}</p>
+      <hr>
+      <p class="card-text">Количество просмотров - {{ post.views_count }}</p>
+      <hr>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group-2">
+          <a href="{% url 'blog:edit_post' post.pk %}" class="btn btn-sm btn-primary">Редактировать</a>
+          <a href="{% url 'blog:index' %}" class="btn btn-sm btn-secondary">Назад</a>
+          <a href="{% url 'blog:delete_post' post.pk %}" class="btn btn-sm btn-danger">Удалить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
