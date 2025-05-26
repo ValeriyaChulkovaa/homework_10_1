@@ -1,0 +1,67 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "iPhone 11 128",
+        "description": "",
+        "images": "",
+        "category": 1,
+        "purchase_price": 30000,
+        "created_at": "2024-10-24",
+        "updated_at": "2024-10-23T21:43:11.669Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "iPhone 13 128",
+        "description": "",
+        "images": "",
+        "category": 1,
+        "purchase_price": 53000,
+        "created_at": "2024-10-24",
+        "updated_at": "2024-10-23T21:44:11.197Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "TECNO megabook k16s",
+        "description": "",
+        "images": "",
+        "category": 3,
+        "purchase_price": 47000,
+        "created_at": "2024-10-24",
+        "updated_at": "2024-10-23T21:44:48.670Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Мышь Defender",
+        "description": null,
+        "images": "",
+        "category": 5,
+        "purchase_price": 800,
+        "created_at": "2024-10-24",
+        "updated_at": "2024-10-23T22:02:16.577Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "LG AVG 15 A",
+        "description": null,
+        "images": "",
+        "category": 6,
+        "purchase_price": 33500,
+        "created_at": "2024-10-24",
+        "updated_at": "2024-10-23T22:02:49.308Z"
+    }
+}
+]
