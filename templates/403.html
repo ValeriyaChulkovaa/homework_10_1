@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Убираем возможность скролла */
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+    <title>Доступ запрещен</title>
+</head>
+<body>
+    <!-- Модальное окно -->
+    <div class="modal fade show" id="permissionModal" tabindex="-1" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Доступ запрещен</h5>
+                </div>
+                <div class="modal-body">
+                    <p>У вас недостаточно прав для выполнения этого действия.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="goBack()">ОК</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Функция для возврата на предыдущую страницу
+        function goBack() {
+            if (document.referrer) {
+                window.history.back(); // Возвращает на предыдущую страницу
+            } else {
+                window.location.href = '/'; // Если реферера нет, переходим на главную
+            }
+        }
+    </script>
+</body>
+</html>
