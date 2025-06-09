@@ -29,7 +29,7 @@
 ### Шаги для запуска проекта:
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ValeriyaChulkovaa/homework_10_1
+   git clone https://github.com/Sweerx/DjangoHomeworkOne.git
    
 2. Установка зависимостей:
     ```bash

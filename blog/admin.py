@@ -23,3 +23,4 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'content', 'preview', 'is_published')
     search_fields = ('title', 'is_published')
     actions = [make_published, make_unpublished, delete_selected_posts]
+
