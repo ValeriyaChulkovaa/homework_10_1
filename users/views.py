@@ -2,9 +2,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
 from rest_framework.filters import OrderingFilter
 
-from materials.models import Payment
 from src.utils import get_queryset_for_owner
-from .models import User
 from .serializers import PaymentSerializer, UserSerializer, NewUserSerializer, UserDetailSerializer
 from rest_framework.permissions import AllowAny, IsAdminUser
 from .permissions import IsCurrentUser, IsModerator, IsOwner

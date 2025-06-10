@@ -1,0 +1,37 @@
+{% extends 'catalog/base.html' %}
+{% load my_tag %}
+
+{% block title %}Главная станица{% endblock %}
+
+{% block content %}
+
+<div class="d-flex flex-wrap justify-content-center">
+    {% for product in products %}
+
+        {% if product.is_published or request.user|in_group:"Модератор продуктов" or request.user.is_superuser %}
+            <div class="card mt-4 mb-4 me-4" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ product }}</h5>
+
+                {% if request.user|in_group:"Модератор продуктов" or request.user.is_superuser %}
+
+                    {% if product.is_published %}
+                        <h6 style="color: green;">(Опубликован)</h6>
+                    {% else %}
+                        <h6 style="color: red;">(Не опубликован)</h6>
+                    {% endif %}
+
+                {% endif %}
+                <h6 class="card-subtitle mb-2 text-body-secondary">Цена {{ product.purchase_price }} ₽</h6>
+                <p class="card-text">{{ product.description|truncatechars:50 }}</p>
+                <a href="{% url 'catalog:product_details' product.pk  %}" class="btn btn-sm btn-secondary d-block mx-auto">Посмотреть</a>
+
+                <a href="{% url 'catalog:products_by_category' product.category  %}" class="btn btn-sm btn-secondary d-block mx-auto mt-2">Все продукты категории: {{ product.category }}</a>
+              </div>
+            </div>
+        {% else %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}
