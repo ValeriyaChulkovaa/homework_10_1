@@ -58,4 +58,3 @@ class DeleteProductDeleteView(LoginRequiredMixin, DeleteView):
     success_url = '/'
     context_object_name = 'products'
 
-
