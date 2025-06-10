@@ -1,891 +1,733 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage report</title>
-    <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
-    <link rel="stylesheet" href="style_cb_718ce007.css" type="text/css">
-    <script src="coverage_html_cb_497bf287.js" defer></script>
-</head>
-<body class="indexfile">
-<header>
-    <div class="content">
-        <h1>Coverage report:
-            <span class="pc_cov">79%</span>
-        </h1>
-        <aside id="help_panel_wrapper">
-            <input id="help_panel_state" type="checkbox">
-            <label for="help_panel_state">
-                <img id="keyboard_icon" src="keybd_closed_cb_ce680311.png" alt="Show/hide keyboard shortcuts">
-            </label>
-            <div id="help_panel">
-                <p class="legend">Shortcuts on this page</p>
-                <div class="keyhelp">
-                    <p>
-                        <kbd>f</kbd>
-                        <kbd>n</kbd>
-                        <kbd>s</kbd>
-                        <kbd>m</kbd>
-                        <kbd>x</kbd>
-                        <kbd>c</kbd>
-                        &nbsp; change column sorting
-                    </p>
-                    <p>
-                        <kbd>[</kbd>
-                        <kbd>]</kbd>
-                        &nbsp; prev/next file
-                    </p>
-                    <p>
-                        <kbd>?</kbd> &nbsp; show/hide this help
-                    </p>
-                </div>
-            </div>
-        </aside>
-        <form id="filter_container">
-            <input id="filter" type="text" value="" placeholder="filter...">
-            <div>
-                <input id="hide100" type="checkbox" >
-                <label for="hide100">hide covered</label>
-            </div>
-        </form>
-        <h2>
-                <a class="button" href="index.html">Files</a>
-                <a class="button" href="function_index.html">Functions</a>
-                <a class="button current">Classes</a>
-        </h2>
-        <p class="text">
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-25 15:26 +0300
-        </p>
-    </div>
-</header>
-<main id="index">
-    <table class="index" data-sortable>
-        <thead>
-            <tr class="tablehead" title="Click to sort">
-                <th id="file" class="name left" aria-sort="none" data-shortcut="f">File<span class="arrows"></span></th>
-                <th id="region" class="name left" aria-sort="none" data-default-sort-order="ascending" data-shortcut="n">class<span class="arrows"></span></th>
-                <th id="statements" aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements<span class="arrows"></span></th>
-                <th id="missing" aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing<span class="arrows"></span></th>
-                <th id="excluded" aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded<span class="arrows"></span></th>
-                <th id="coverage" class="right" aria-sort="none" data-shortcut="c">coverage<span class="arrows"></span></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="region">
-                <td class="name left"><a href="z_7f9b1f3b1984166a___init___py.html">conf\__init__.py</a></td>
-                <td class="name left"><a href="z_7f9b1f3b1984166a___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_7f9b1f3b1984166a_asgi_py.html">conf\asgi.py</a></td>
-                <td class="name left"><a href="z_7f9b1f3b1984166a_asgi_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>4</td>
-                <td>4</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 4">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_7f9b1f3b1984166a_settings_py.html">conf\settings.py</a></td>
-                <td class="name left"><a href="z_7f9b1f3b1984166a_settings_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>41</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="41 41">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_7f9b1f3b1984166a_urls_py.html">conf\urls.py</a></td>
-                <td class="name left"><a href="z_7f9b1f3b1984166a_urls_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>3</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="3 3">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_7f9b1f3b1984166a_wsgi_py.html">conf\wsgi.py</a></td>
-                <td class="name left"><a href="z_7f9b1f3b1984166a_wsgi_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>4</td>
-                <td>4</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 4">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="manage_py.html">manage.py</a></td>
-                <td class="name left"><a href="manage_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>11</td>
-                <td>2</td>
-                <td>0</td>
-                <td class="right" data-ratio="9 11">82%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562___init___py.html">materials\__init__.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html#t6">materials\admin.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html#t6"><data value='CourseAdmin'>CourseAdmin</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html#t11">materials\admin.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html#t11"><data value='LessonAdmin'>LessonAdmin</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html#t16">materials\admin.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html#t16"><data value='PaymentAdmin'>PaymentAdmin</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html">materials\admin.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_admin_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>11</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="11 11">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_apps_py.html#t4">materials\apps.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_apps_py.html#t4"><data value='MaterialsConfig'>MaterialsConfig</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_apps_py.html">materials\apps.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_apps_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>4</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="4 4">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_2484c951eaf88dd9_0001_initial_py.html#t7">materials\migrations\0001_initial.py</a></td>
-                <td class="name left"><a href="z_2484c951eaf88dd9_0001_initial_py.html#t7"><data value='Migration'>Migration</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_2484c951eaf88dd9_0001_initial_py.html">materials\migrations\0001_initial.py</a></td>
-                <td class="name left"><a href="z_2484c951eaf88dd9_0001_initial_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>6</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_2484c951eaf88dd9_0002_course_owner_lesson_owner_alter_lesson_course_and_more_py.html#t8">materials\migrations\0002_course_owner_lesson_owner_alter_lesson_course_and_more.py</a></td>
-                <td class="name left"><a href="z_2484c951eaf88dd9_0002_course_owner_lesson_owner_alter_lesson_course_and_more_py.html#t8"><data value='Migration'>Migration</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_2484c951eaf88dd9_0002_course_owner_lesson_owner_alter_lesson_course_and_more_py.html">materials\migrations\0002_course_owner_lesson_owner_alter_lesson_course_and_more.py</a></td>
-                <td class="name left"><a href="z_2484c951eaf88dd9_0002_course_owner_lesson_owner_alter_lesson_course_and_more_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>6</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_2484c951eaf88dd9___init___py.html">materials\migrations\__init__.py</a></td>
-                <td class="name left"><a href="z_2484c951eaf88dd9___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t10">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t10"><data value='Course'>Course</data></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 1">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t17">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t17"><data value='Meta'>Course.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t25">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t25"><data value='Lesson'>Lesson</data></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 1">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t35">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t35"><data value='Meta'>Lesson.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t43">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t43"><data value='Payment'>Payment</data></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 1">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t60">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t60"><data value='Meta'>Payment.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t68">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t68"><data value='Subscription'>Subscription</data></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 1">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t75">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html#t75"><data value='Meta'>Subscription.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_models_py.html">materials\models.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_models_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>47</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="47 47">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_paginators_py.html#t4">materials\paginators.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_paginators_py.html#t4"><data value='CoursePaginator'>CoursePaginator</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_paginators_py.html#t13">materials\paginators.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_paginators_py.html#t13"><data value='LessonPaginator'>LessonPaginator</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_paginators_py.html">materials\paginators.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_paginators_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>9</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="9 9">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t7">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t7"><data value='LessonSerializer'>LessonSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t8">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t8"><data value='Meta'>LessonSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t14">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t14"><data value='SubscriptionSerializer'>SubscriptionSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t15">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t15"><data value='Meta'>SubscriptionSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t20">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t20"><data value='CourseSerializer'>CourseSerializer</data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t25">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t25"><data value='Meta'>CourseSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t51">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t51"><data value='StaffCourseSerializer'>StaffCourseSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t59">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t59"><data value='PaymentSerializer'>PaymentSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t64">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html#t64"><data value='Meta'>PaymentSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html">materials\serializers.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_serializers_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>29</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="29 29">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_tests_py.html#t13">materials\tests.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_tests_py.html#t13"><data value='LessonTestCase'>LessonTestCase</data></a></td>
-                <td>76</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="76 76">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_tests_py.html">materials\tests.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_tests_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>15</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="15 15">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_urls_py.html">materials\urls.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_urls_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>8</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="8 8">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_validators_py.html#t4">materials\validators.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_validators_py.html#t4"><data value='YoutubeLinkValidator'>YoutubeLinkValidator</data></a></td>
-                <td>6</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_validators_py.html">materials\validators.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_validators_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>4</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="4 4">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t12">materials\views.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t12"><data value='CourseViewSet'>CourseViewSet</data></a></td>
-                <td>16</td>
-                <td>16</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 16">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t41">materials\views.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t41"><data value='LessonListCreateAPIView'>LessonListCreateAPIView</data></a></td>
-                <td>7</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="7 7">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t61">materials\views.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t61"><data value='LessonRetrieveUpdateDestroyAPIView'>LessonRetrieveUpdateDestroyAPIView</data></a></td>
-                <td>5</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="5 5">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t73">materials\views.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t73"><data value='SubscriptionListCreateAPIView'>SubscriptionListCreateAPIView</data></a></td>
-                <td>4</td>
-                <td>4</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 4">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t92">materials\views.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_views_py.html#t92"><data value='SubscriptionRetrieveUpdateDestroyAPIView'>SubscriptionRetrieveUpdateDestroyAPIView</data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f978324627c06562_views_py.html">materials\views.py</a></td>
-                <td class="name left"><a href="z_f978324627c06562_views_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>35</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="35 35">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_145eef247bfb46b6___init___py.html">src\__init__.py</a></td>
-                <td class="name left"><a href="z_145eef247bfb46b6___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_145eef247bfb46b6_utils_py.html">src\utils.py</a></td>
-                <td class="name left"><a href="z_145eef247bfb46b6_utils_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>7</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="7 7">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e___init___py.html">users\__init__.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_admin_py.html#t8">users\admin.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_admin_py.html#t8"><data value='CustomUserAdmin'>CustomUserAdmin</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_admin_py.html">users\admin.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_admin_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>6</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_apps_py.html#t4">users\apps.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_apps_py.html#t4"><data value='UsersConfig'>UsersConfig</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_apps_py.html">users\apps.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_apps_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>4</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="4 4">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_8b562f3fe71efc7d___init___py.html">users\management\__init__.py</a></td>
-                <td class="name left"><a href="z_8b562f3fe71efc7d___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412___init___py.html">users\management\commands\__init__.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_create_superuser_py.html#t5">users\management\commands\create_superuser.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_create_superuser_py.html#t5"><data value='Command'>Command</data></a></td>
-                <td>10</td>
-                <td>10</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 10">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_create_superuser_py.html">users\management\commands\create_superuser.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_create_superuser_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_load_payments_py.html#t7">users\management\commands\load_payments.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_load_payments_py.html#t7"><data value='Command'>Command</data></a></td>
-                <td>3</td>
-                <td>3</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 3">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_load_payments_py.html">users\management\commands\load_payments.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_load_payments_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_py.html#t7">users\management\commands\load_users.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_py.html#t7"><data value='Command'>Command</data></a></td>
-                <td>3</td>
-                <td>3</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 3">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_py.html">users\management\commands\load_users.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_and_groups_py.html#t8">users\management\commands\load_users_and_groups.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_and_groups_py.html#t8"><data value='Command'>Command</data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_and_groups_py.html">users\management\commands\load_users_and_groups.py</a></td>
-                <td class="name left"><a href="z_1df033120bbcc412_load_users_and_groups_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>6</td>
-                <td>6</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 6">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0001_initial_py.html#t6">users\migrations\0001_initial.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0001_initial_py.html#t6"><data value='Migration'>Migration</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0001_initial_py.html">users\migrations\0001_initial.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0001_initial_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>5</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="5 5">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0002_payment_py.html#t7">users\migrations\0002_payment.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0002_payment_py.html#t7"><data value='Migration'>Migration</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0002_payment_py.html">users\migrations\0002_payment.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0002_payment_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>5</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="5 5">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0003_alter_user_managers_rename_user_payment_owner_and_more_py.html#t8">users\migrations\0003_alter_user_managers_rename_user_payment_owner_and_more.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0003_alter_user_managers_rename_user_payment_owner_and_more_py.html#t8"><data value='Migration'>Migration</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0003_alter_user_managers_rename_user_payment_owner_and_more_py.html">users\migrations\0003_alter_user_managers_rename_user_payment_owner_and_more.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0003_alter_user_managers_rename_user_payment_owner_and_more_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>6</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0004_delete_payment_py.html#t6">users\migrations\0004_delete_payment.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0004_delete_payment_py.html#t6"><data value='Migration'>Migration</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0004_delete_payment_py.html">users\migrations\0004_delete_payment.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4_0004_delete_payment_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>4</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="4 4">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_fff39e3ca0aaeed4___init___py.html">users\migrations\__init__.py</a></td>
-                <td class="name left"><a href="z_fff39e3ca0aaeed4___init___py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_models_py.html#t6">users\models.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_models_py.html#t6"><data value='User'>User</data></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 1">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_models_py.html#t16">users\models.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_models_py.html#t16"><data value='Meta'>User.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_models_py.html">users\models.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_models_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>14</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="14 14">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html#t4">users\permissions.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html#t4"><data value='IsModerator'>IsModerator</data></a></td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="1 1">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html#t9">users\permissions.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html#t9"><data value='IsOwner'>IsOwner</data></a></td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="1 1">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html#t14">users\permissions.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html#t14"><data value='IsCurrentUser'>IsCurrentUser</data></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 1">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html">users\permissions.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_permissions_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>7</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="7 7">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t7">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t7"><data value='NewUserSerializer'>NewUserSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t8">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t8"><data value='Meta'>NewUserSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t13">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t13"><data value='UserSerializer'>UserSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t14">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t14"><data value='Meta'>UserSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t19">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t19"><data value='UserDetailSerializer'>UserDetailSerializer</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t22">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html#t22"><data value='Meta'>UserDetailSerializer.Meta</data></a></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 0">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html">users\serializers.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_serializers_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>16</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="16 16">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_tests_py.html">users\tests.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_tests_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="1 1">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_urls_py.html">users\urls.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_urls_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>7</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="7 7">100%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t14">users\views.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t14"><data value='UserListCreateAPIView'>UserListCreateAPIView</data></a></td>
-                <td>9</td>
-                <td>9</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 9">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t34">users\views.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t34"><data value='UserRetrieveUpdateDestroyAPIView'>UserRetrieveUpdateDestroyAPIView</data></a></td>
-                <td>8</td>
-                <td>8</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 8">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t51">users\views.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t51"><data value='PaymentListCreateAPIView'>PaymentListCreateAPIView</data></a></td>
-                <td>4</td>
-                <td>4</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 4">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t67">users\views.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html#t67"><data value='PaymentRetrieveUpdateDestroyAPIView'>PaymentRetrieveUpdateDestroyAPIView</data></a></td>
-                <td>5</td>
-                <td>5</td>
-                <td>0</td>
-                <td class="right" data-ratio="0 5">0%</td>
-            </tr>
-            <tr class="region">
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html">users\views.py</a></td>
-                <td class="name left"><a href="z_f6c68bdc9becfc1e_views_py.html"><data value=''><span class='no-noun'>(no class)</span></data></a></td>
-                <td>32</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="right" data-ratio="32 32">100%</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr class="total">
-                <td class="name left">Total</td>
-                <td class="name left">&nbsp;</td>
-                <td>551</td>
-                <td>114</td>
-                <td>0</td>
-                <td class="right" data-ratio="437 551">79%</td>
-            </tr>
-        </tfoot>
-    </table>
-    <p id="no_rows">
-        No items found using the specified filter.
-    </p>
-</main>
-<footer>
-    <div class="content">
-        <p>
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-25 15:26 +0300
-        </p>
-    </div>
-    <aside class="hidden">
-        <a id="prevFileLink" class="nav" href=""></a>
-        <a id="nextFileLink" class="nav" href=""></a>
-        <button type="button" class="button_prev_file" data-shortcut="["></button>
-        <button type="button" class="button_next_file" data-shortcut="]"></button>
-        <button type="button" class="button_show_hide_help" data-shortcut="?"></button>
-    </aside>
-</footer>
-</body>
-</html>
+// Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
+// For details: https://github.com/nedbat/coveragepy/blob/master/NOTICE.txt
+
+// Coverage.py HTML report browser code.
+/*jslint browser: true, sloppy: true, vars: true, plusplus: true, maxerr: 50, indent: 4 */
+/*global coverage: true, document, window, $ */
+
+coverage = {};
+
+// General helpers
+function debounce(callback, wait) {
+    let timeoutId = null;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            callback.apply(this, args);
+        }, wait);
+    };
+};
+
+function checkVisible(element) {
+    const rect = element.getBoundingClientRect();
+    const viewBottom = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    const viewTop = 30;
+    return !(rect.bottom < viewTop || rect.top >= viewBottom);
+}
+
+function on_click(sel, fn) {
+    const elt = document.querySelector(sel);
+    if (elt) {
+        elt.addEventListener("click", fn);
+    }
+}
+
+// Helpers for table sorting
+function getCellValue(row, column = 0) {
+    const cell = row.cells[column]  // nosemgrep: eslint.detect-object-injection
+    if (cell.childElementCount == 1) {
+        var child = cell.firstElementChild;
+        if (child.tagName === "A") {
+            child = child.firstElementChild;
+        }
+        if (child instanceof HTMLDataElement && child.value) {
+            return child.value;
+        }
+    }
+    return cell.innerText || cell.textContent;
+}
+
+function rowComparator(rowA, rowB, column = 0) {
+    let valueA = getCellValue(rowA, column);
+    let valueB = getCellValue(rowB, column);
+    if (!isNaN(valueA) && !isNaN(valueB)) {
+        return valueA - valueB;
+    }
+    return valueA.localeCompare(valueB, undefined, {numeric: true});
+}
+
+function sortColumn(th) {
+    // Get the current sorting direction of the selected header,
+    // clear state on other headers and then set the new sorting direction.
+    const currentSortOrder = th.getAttribute("aria-sort");
+    [...th.parentElement.cells].forEach(header => header.setAttribute("aria-sort", "none"));
+    var direction;
+    if (currentSortOrder === "none") {
+        direction = th.dataset.defaultSortOrder || "ascending";
+    }
+    else if (currentSortOrder === "ascending") {
+        direction = "descending";
+    }
+    else {
+        direction = "ascending";
+    }
+    th.setAttribute("aria-sort", direction);
+
+    const column = [...th.parentElement.cells].indexOf(th)
+
+    // Sort all rows and afterwards append them in order to move them in the DOM.
+    Array.from(th.closest("table").querySelectorAll("tbody tr"))
+        .sort((rowA, rowB) => rowComparator(rowA, rowB, column) * (direction === "ascending" ? 1 : -1))
+        .forEach(tr => tr.parentElement.appendChild(tr));
+
+    // Save the sort order for next time.
+    if (th.id !== "region") {
+        let th_id = "file";  // Sort by file if we don't have a column id
+        let current_direction = direction;
+        const stored_list = localStorage.getItem(coverage.INDEX_SORT_STORAGE);
+        if (stored_list) {
+            ({th_id, direction} = JSON.parse(stored_list))
+        }
+        localStorage.setItem(coverage.INDEX_SORT_STORAGE, JSON.stringify({
+            "th_id": th.id,
+            "direction": current_direction
+        }));
+        if (th.id !== th_id || document.getElementById("region")) {
+            // Sort column has changed, unset sorting by function or class.
+            localStorage.setItem(coverage.SORTED_BY_REGION, JSON.stringify({
+                "by_region": false,
+                "region_direction": current_direction
+            }));
+        }
+    }
+    else {
+        // Sort column has changed to by function or class, remember that.
+        localStorage.setItem(coverage.SORTED_BY_REGION, JSON.stringify({
+            "by_region": true,
+            "region_direction": direction
+        }));
+    }
+}
+
+// Find all the elements with data-shortcut attribute, and use them to assign a shortcut key.
+coverage.assign_shortkeys = function () {
+    document.querySelectorAll("[data-shortcut]").forEach(element => {
+        document.addEventListener("keypress", event => {
+            if (event.target.tagName.toLowerCase() === "input") {
+                return; // ignore keypress from search filter
+            }
+            if (event.key === element.dataset.shortcut) {
+                element.click();
+            }
+        });
+    });
+};
+
+// Create the events for the filter box.
+coverage.wire_up_filter = function () {
+    // Populate the filter and hide100 inputs if there are saved values for them.
+    const saved_filter_value = localStorage.getItem(coverage.FILTER_STORAGE);
+    if (saved_filter_value) {
+        document.getElementById("filter").value = saved_filter_value;
+    }
+    const saved_hide100_value = localStorage.getItem(coverage.HIDE100_STORAGE);
+    if (saved_hide100_value) {
+        document.getElementById("hide100").checked = JSON.parse(saved_hide100_value);
+    }
+
+    // Cache elements.
+    const table = document.querySelector("table.index");
+    const table_body_rows = table.querySelectorAll("tbody tr");
+    const no_rows = document.getElementById("no_rows");
+
+    // Observe filter keyevents.
+    const filter_handler = (event => {
+        // Keep running total of each metric, first index contains number of shown rows
+        const totals = new Array(table.rows[0].cells.length).fill(0);
+        // Accumulate the percentage as fraction
+        totals[totals.length - 1] = { "numer": 0, "denom": 0 };  // nosemgrep: eslint.detect-object-injection
+
+        var text = document.getElementById("filter").value;
+        // Store filter value
+        localStorage.setItem(coverage.FILTER_STORAGE, text);
+        const casefold = (text === text.toLowerCase());
+        const hide100 = document.getElementById("hide100").checked;
+        // Store hide value.
+        localStorage.setItem(coverage.HIDE100_STORAGE, JSON.stringify(hide100));
+
+        // Hide / show elements.
+        table_body_rows.forEach(row => {
+            var show = false;
+            // Check the text filter.
+            for (let column = 0; column < totals.length; column++) {
+                cell = row.cells[column];
+                if (cell.classList.contains("name")) {
+                    var celltext = cell.textContent;
+                    if (casefold) {
+                        celltext = celltext.toLowerCase();
+                    }
+                    if (celltext.includes(text)) {
+                        show = true;
+                    }
+                }
+            }
+
+            // Check the "hide covered" filter.
+            if (show && hide100) {
+                const [numer, denom] = row.cells[row.cells.length - 1].dataset.ratio.split(" ");
+                show = (numer !== denom);
+            }
+
+            if (!show) {
+                // hide
+                row.classList.add("hidden");
+                return;
+            }
+
+            // show
+            row.classList.remove("hidden");
+            totals[0]++;
+
+            for (let column = 0; column < totals.length; column++) {
+                // Accumulate dynamic totals
+                cell = row.cells[column]  // nosemgrep: eslint.detect-object-injection
+                if (cell.classList.contains("name")) {
+                    continue;
+                }
+                if (column === totals.length - 1) {
+                    // Last column contains percentage
+                    const [numer, denom] = cell.dataset.ratio.split(" ");
+                    totals[column]["numer"] += parseInt(numer, 10);  // nosemgrep: eslint.detect-object-injection
+                    totals[column]["denom"] += parseInt(denom, 10);  // nosemgrep: eslint.detect-object-injection
+                }
+                else {
+                    totals[column] += parseInt(cell.textContent, 10);  // nosemgrep: eslint.detect-object-injection
+                }
+            }
+        });
+
+        // Show placeholder if no rows will be displayed.
+        if (!totals[0]) {
+            // Show placeholder, hide table.
+            no_rows.style.display = "block";
+            table.style.display = "none";
+            return;
+        }
+
+        // Hide placeholder, show table.
+        no_rows.style.display = null;
+        table.style.display = null;
+
+        const footer = table.tFoot.rows[0];
+        // Calculate new dynamic sum values based on visible rows.
+        for (let column = 0; column < totals.length; column++) {
+            // Get footer cell element.
+            const cell = footer.cells[column];  // nosemgrep: eslint.detect-object-injection
+            if (cell.classList.contains("name")) {
+                continue;
+            }
+
+            // Set value into dynamic footer cell element.
+            if (column === totals.length - 1) {
+                // Percentage column uses the numerator and denominator,
+                // and adapts to the number of decimal places.
+                const match = /\.([0-9]+)/.exec(cell.textContent);
+                const places = match ? match[1].length : 0;
+                const { numer, denom } = totals[column];  // nosemgrep: eslint.detect-object-injection
+                cell.dataset.ratio = `${numer} ${denom}`;
+                // Check denom to prevent NaN if filtered files contain no statements
+                cell.textContent = denom
+                    ? `${(numer * 100 / denom).toFixed(places)}%`
+                    : `${(100).toFixed(places)}%`;
+            }
+            else {
+                cell.textContent = totals[column];  // nosemgrep: eslint.detect-object-injection
+            }
+        }
+    });
+
+    document.getElementById("filter").addEventListener("input", debounce(filter_handler));
+    document.getElementById("hide100").addEventListener("input", debounce(filter_handler));
+
+    // Trigger change event on setup, to force filter on page refresh
+    // (filter value may still be present).
+    document.getElementById("filter").dispatchEvent(new Event("input"));
+    document.getElementById("hide100").dispatchEvent(new Event("input"));
+};
+coverage.FILTER_STORAGE = "COVERAGE_FILTER_VALUE";
+coverage.HIDE100_STORAGE = "COVERAGE_HIDE100_VALUE";
+
+// Set up the click-to-sort columns.
+coverage.wire_up_sorting = function () {
+    document.querySelectorAll("[data-sortable] th[aria-sort]").forEach(
+        th => th.addEventListener("click", e => sortColumn(e.target))
+    );
+
+    // Look for a localStorage item containing previous sort settings:
+    let th_id = "file", direction = "ascending";
+    const stored_list = localStorage.getItem(coverage.INDEX_SORT_STORAGE);
+    if (stored_list) {
+        ({th_id, direction} = JSON.parse(stored_list));
+    }
+    let by_region = false, region_direction = "ascending";
+    const sorted_by_region = localStorage.getItem(coverage.SORTED_BY_REGION);
+    if (sorted_by_region) {
+        ({
+            by_region,
+            region_direction
+        } = JSON.parse(sorted_by_region));
+    }
+
+    const region_id = "region";
+    if (by_region && document.getElementById(region_id)) {
+        direction = region_direction;
+    }
+    // If we are in a page that has a column with id of "region", sort on
+    // it if the last sort was by function or class.
+    let th;
+    if (document.getElementById(region_id)) {
+        th = document.getElementById(by_region ? region_id : th_id);
+    }
+    else {
+        th = document.getElementById(th_id);
+    }
+    th.setAttribute("aria-sort", direction === "ascending" ? "descending" : "ascending");
+    th.click()
+};
+
+coverage.INDEX_SORT_STORAGE = "COVERAGE_INDEX_SORT_2";
+coverage.SORTED_BY_REGION = "COVERAGE_SORT_REGION";
+
+// Loaded on index.html
+coverage.index_ready = function () {
+    coverage.assign_shortkeys();
+    coverage.wire_up_filter();
+    coverage.wire_up_sorting();
+
+    on_click(".button_prev_file", coverage.to_prev_file);
+    on_click(".button_next_file", coverage.to_next_file);
+
+    on_click(".button_show_hide_help", coverage.show_hide_help);
+};
+
+// -- pyfile stuff --
+
+coverage.LINE_FILTERS_STORAGE = "COVERAGE_LINE_FILTERS";
+
+coverage.pyfile_ready = function () {
+    // If we're directed to a particular line number, highlight the line.
+    var frag = location.hash;
+    if (frag.length > 2 && frag[1] === "t") {
+        document.querySelector(frag).closest(".n").classList.add("highlight");
+        coverage.set_sel(parseInt(frag.substr(2), 10));
+    }
+    else {
+        coverage.set_sel(0);
+    }
+
+    on_click(".button_toggle_run", coverage.toggle_lines);
+    on_click(".button_toggle_mis", coverage.toggle_lines);
+    on_click(".button_toggle_exc", coverage.toggle_lines);
+    on_click(".button_toggle_par", coverage.toggle_lines);
+
+    on_click(".button_next_chunk", coverage.to_next_chunk_nicely);
+    on_click(".button_prev_chunk", coverage.to_prev_chunk_nicely);
+    on_click(".button_top_of_page", coverage.to_top);
+    on_click(".button_first_chunk", coverage.to_first_chunk);
+
+    on_click(".button_prev_file", coverage.to_prev_file);
+    on_click(".button_next_file", coverage.to_next_file);
+    on_click(".button_to_index", coverage.to_index);
+
+    on_click(".button_show_hide_help", coverage.show_hide_help);
+
+    coverage.filters = undefined;
+    try {
+        coverage.filters = localStorage.getItem(coverage.LINE_FILTERS_STORAGE);
+    } catch(err) {}
+
+    if (coverage.filters) {
+        coverage.filters = JSON.parse(coverage.filters);
+    }
+    else {
+        coverage.filters = {run: false, exc: true, mis: true, par: true};
+    }
+
+    for (cls in coverage.filters) {
+        coverage.set_line_visibilty(cls, coverage.filters[cls]);  // nosemgrep: eslint.detect-object-injection
+    }
+
+    coverage.assign_shortkeys();
+    coverage.init_scroll_markers();
+    coverage.wire_up_sticky_header();
+
+    document.querySelectorAll("[id^=ctxs]").forEach(
+        cbox => cbox.addEventListener("click", coverage.expand_contexts)
+    );
+
+    // Rebuild scroll markers when the window height changes.
+    window.addEventListener("resize", coverage.build_scroll_markers);
+};
+
+coverage.toggle_lines = function (event) {
+    const btn = event.target.closest("button");
+    const category = btn.value
+    const show = !btn.classList.contains("show_" + category);
+    coverage.set_line_visibilty(category, show);
+    coverage.build_scroll_markers();
+    coverage.filters[category] = show;
+    try {
+        localStorage.setItem(coverage.LINE_FILTERS_STORAGE, JSON.stringify(coverage.filters));
+    } catch(err) {}
+};
+
+coverage.set_line_visibilty = function (category, should_show) {
+    const cls = "show_" + category;
+    const btn = document.querySelector(".button_toggle_" + category);
+    if (btn) {
+        if (should_show) {
+            document.querySelectorAll("#source ." + category).forEach(e => e.classList.add(cls));
+            btn.classList.add(cls);
+        }
+        else {
+            document.querySelectorAll("#source ." + category).forEach(e => e.classList.remove(cls));
+            btn.classList.remove(cls);
+        }
+    }
+};
+
+// Return the nth line div.
+coverage.line_elt = function (n) {
+    return document.getElementById("t" + n)?.closest("p");
+};
+
+// Set the selection.  b and e are line numbers.
+coverage.set_sel = function (b, e) {
+    // The first line selected.
+    coverage.sel_begin = b;
+    // The next line not selected.
+    coverage.sel_end = (e === undefined) ? b+1 : e;
+};
+
+coverage.to_top = function () {
+    coverage.set_sel(0, 1);
+    coverage.scroll_window(0);
+};
+
+coverage.to_first_chunk = function () {
+    coverage.set_sel(0, 1);
+    coverage.to_next_chunk();
+};
+
+coverage.to_prev_file = function () {
+    window.location = document.getElementById("prevFileLink").href;
+}
+
+coverage.to_next_file = function () {
+    window.location = document.getElementById("nextFileLink").href;
+}
+
+coverage.to_index = function () {
+    location.href = document.getElementById("indexLink").href;
+}
+
+coverage.show_hide_help = function () {
+    const helpCheck = document.getElementById("help_panel_state")
+    helpCheck.checked = !helpCheck.checked;
+}
+
+// Return a string indicating what kind of chunk this line belongs to,
+// or null if not a chunk.
+coverage.chunk_indicator = function (line_elt) {
+    const classes = line_elt?.className;
+    if (!classes) {
+        return null;
+    }
+    const match = classes.match(/\bshow_\w+\b/);
+    if (!match) {
+        return null;
+    }
+    return match[0];
+};
+
+coverage.to_next_chunk = function () {
+    const c = coverage;
+
+    // Find the start of the next colored chunk.
+    var probe = c.sel_end;
+    var chunk_indicator, probe_line;
+    while (true) {
+        probe_line = c.line_elt(probe);
+        if (!probe_line) {
+            return;
+        }
+        chunk_indicator = c.chunk_indicator(probe_line);
+        if (chunk_indicator) {
+            break;
+        }
+        probe++;
+    }
+
+    // There's a next chunk, `probe` points to it.
+    var begin = probe;
+
+    // Find the end of this chunk.
+    var next_indicator = chunk_indicator;
+    while (next_indicator === chunk_indicator) {
+        probe++;
+        probe_line = c.line_elt(probe);
+        next_indicator = c.chunk_indicator(probe_line);
+    }
+    c.set_sel(begin, probe);
+    c.show_selection();
+};
+
+coverage.to_prev_chunk = function () {
+    const c = coverage;
+
+    // Find the end of the prev colored chunk.
+    var probe = c.sel_begin-1;
+    var probe_line = c.line_elt(probe);
+    if (!probe_line) {
+        return;
+    }
+    var chunk_indicator = c.chunk_indicator(probe_line);
+    while (probe > 1 && !chunk_indicator) {
+        probe--;
+        probe_line = c.line_elt(probe);
+        if (!probe_line) {
+            return;
+        }
+        chunk_indicator = c.chunk_indicator(probe_line);
+    }
+
+    // There's a prev chunk, `probe` points to its last line.
+    var end = probe+1;
+
+    // Find the beginning of this chunk.
+    var prev_indicator = chunk_indicator;
+    while (prev_indicator === chunk_indicator) {
+        probe--;
+        if (probe <= 0) {
+            return;
+        }
+        probe_line = c.line_elt(probe);
+        prev_indicator = c.chunk_indicator(probe_line);
+    }
+    c.set_sel(probe+1, end);
+    c.show_selection();
+};
+
+// Returns 0, 1, or 2: how many of the two ends of the selection are on
+// the screen right now?
+coverage.selection_ends_on_screen = function () {
+    if (coverage.sel_begin === 0) {
+        return 0;
+    }
+
+    const begin = coverage.line_elt(coverage.sel_begin);
+    const end = coverage.line_elt(coverage.sel_end-1);
+
+    return (
+        (checkVisible(begin) ? 1 : 0)
+        + (checkVisible(end) ? 1 : 0)
+    );
+};
+
+coverage.to_next_chunk_nicely = function () {
+    if (coverage.selection_ends_on_screen() === 0) {
+        // The selection is entirely off the screen:
+        // Set the top line on the screen as selection.
+
+        // This will select the top-left of the viewport
+        // As this is most likely the span with the line number we take the parent
+        const line = document.elementFromPoint(0, 0).parentElement;
+        if (line.parentElement !== document.getElementById("source")) {
+            // The element is not a source line but the header or similar
+            coverage.select_line_or_chunk(1);
+        }
+        else {
+            // We extract the line number from the id
+            coverage.select_line_or_chunk(parseInt(line.id.substring(1), 10));
+        }
+    }
+    coverage.to_next_chunk();
+};
+
+coverage.to_prev_chunk_nicely = function () {
+    if (coverage.selection_ends_on_screen() === 0) {
+        // The selection is entirely off the screen:
+        // Set the lowest line on the screen as selection.
+
+        // This will select the bottom-left of the viewport
+        // As this is most likely the span with the line number we take the parent
+        const line = document.elementFromPoint(document.documentElement.clientHeight-1, 0).parentElement;
+        if (line.parentElement !== document.getElementById("source")) {
+            // The element is not a source line but the header or similar
+            coverage.select_line_or_chunk(coverage.lines_len);
+        }
+        else {
+            // We extract the line number from the id
+            coverage.select_line_or_chunk(parseInt(line.id.substring(1), 10));
+        }
+    }
+    coverage.to_prev_chunk();
+};
+
+// Select line number lineno, or if it is in a colored chunk, select the
+// entire chunk
+coverage.select_line_or_chunk = function (lineno) {
+    var c = coverage;
+    var probe_line = c.line_elt(lineno);
+    if (!probe_line) {
+        return;
+    }
+    var the_indicator = c.chunk_indicator(probe_line);
+    if (the_indicator) {
+        // The line is in a highlighted chunk.
+        // Search backward for the first line.
+        var probe = lineno;
+        var indicator = the_indicator;
+        while (probe > 0 && indicator === the_indicator) {
+            probe--;
+            probe_line = c.line_elt(probe);
+            if (!probe_line) {
+                break;
+            }
+            indicator = c.chunk_indicator(probe_line);
+        }
+        var begin = probe + 1;
+
+        // Search forward for the last line.
+        probe = lineno;
+        indicator = the_indicator;
+        while (indicator === the_indicator) {
+            probe++;
+            probe_line = c.line_elt(probe);
+            indicator = c.chunk_indicator(probe_line);
+        }
+
+        coverage.set_sel(begin, probe);
+    }
+    else {
+        coverage.set_sel(lineno);
+    }
+};
+
+coverage.show_selection = function () {
+    // Highlight the lines in the chunk
+    document.querySelectorAll("#source .highlight").forEach(e => e.classList.remove("highlight"));
+    for (let probe = coverage.sel_begin; probe < coverage.sel_end; probe++) {
+        coverage.line_elt(probe).querySelector(".n").classList.add("highlight");
+    }
+
+    coverage.scroll_to_selection();
+};
+
+coverage.scroll_to_selection = function () {
+    // Scroll the page if the chunk isn't fully visible.
+    if (coverage.selection_ends_on_screen() < 2) {
+        const element = coverage.line_elt(coverage.sel_begin);
+        coverage.scroll_window(element.offsetTop - 60);
+    }
+};
+
+coverage.scroll_window = function (to_pos) {
+    window.scroll({top: to_pos, behavior: "smooth"});
+};
+
+coverage.init_scroll_markers = function () {
+    // Init some variables
+    coverage.lines_len = document.querySelectorAll("#source > p").length;
+
+    // Build html
+    coverage.build_scroll_markers();
+};
+
+coverage.build_scroll_markers = function () {
+    const temp_scroll_marker = document.getElementById("scroll_marker")
+    if (temp_scroll_marker) temp_scroll_marker.remove();
+    // Don't build markers if the window has no scroll bar.
+    if (document.body.scrollHeight <= window.innerHeight) {
+        return;
+    }
+
+    const marker_scale = window.innerHeight / document.body.scrollHeight;
+    const line_height = Math.min(Math.max(3, window.innerHeight / coverage.lines_len), 10);
+
+    let previous_line = -99, last_mark, last_top;
+
+    const scroll_marker = document.createElement("div");
+    scroll_marker.id = "scroll_marker";
+    document.getElementById("source").querySelectorAll(
+        "p.show_run, p.show_mis, p.show_exc, p.show_exc, p.show_par"
+    ).forEach(element => {
+        const line_top = Math.floor(element.offsetTop * marker_scale);
+        const line_number = parseInt(element.querySelector(".n a").id.substr(1));
+
+        if (line_number === previous_line + 1) {
+            // If this solid missed block just make previous mark higher.
+            last_mark.style.height = `${line_top + line_height - last_top}px`;
+        }
+        else {
+            // Add colored line in scroll_marker block.
+            last_mark = document.createElement("div");
+            last_mark.id = `m${line_number}`;
+            last_mark.classList.add("marker");
+            last_mark.style.height = `${line_height}px`;
+            last_mark.style.top = `${line_top}px`;
+            scroll_marker.append(last_mark);
+            last_top = line_top;
+        }
+
+        previous_line = line_number;
+    });
+
+    // Append last to prevent layout calculation
+    document.body.append(scroll_marker);
+};
+
+coverage.wire_up_sticky_header = function () {
+    const header = document.querySelector("header");
+    const header_bottom = (
+        header.querySelector(".content h2").getBoundingClientRect().top -
+        header.getBoundingClientRect().top
+    );
+
+    function updateHeader() {
+        if (window.scrollY > header_bottom) {
+            header.classList.add("sticky");
+        }
+        else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    window.addEventListener("scroll", updateHeader);
+    updateHeader();
+};
+
+coverage.expand_contexts = function (e) {
+    var ctxs = e.target.parentNode.querySelector(".ctxs");
+
+    if (!ctxs.classList.contains("expanded")) {
+        var ctxs_text = ctxs.textContent;
+        var width = Number(ctxs_text[0]);
+        ctxs.textContent = "";
+        for (var i = 1; i < ctxs_text.length; i += width) {
+            key = ctxs_text.substring(i, i + width).trim();
+            ctxs.appendChild(document.createTextNode(contexts[key]));
+            ctxs.appendChild(document.createElement("br"));
+        }
+        ctxs.classList.add("expanded");
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.body.classList.contains("indexfile")) {
+        coverage.index_ready();
+    }
+    else {
+        coverage.pyfile_ready();
+    }
+});
