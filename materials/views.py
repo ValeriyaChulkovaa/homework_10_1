@@ -1,8 +1,14 @@
+from django.contrib.auth.models import Group
 from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAdminUser
 
+from src.utils import get_queryset_for_owner
+from users.permissions import IsModerator, IsOwner
+
 from .models import Course, Lesson, Subscription
+from .paginators import CoursePaginator, LessonPaginator
 from .serializers import CourseSerializer, LessonSerializer, StaffCourseSerializer, SubscriptionSerializer
+
 
 
 class CourseViewSet(viewsets.ModelViewSet):
