@@ -31,7 +31,7 @@
 ### Шаги для запуска проекта:
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ValeriyaChulkovaa/homework_10_1
+   git clonehttps://github.com/ValeriyaChulkovaa/homework_10_1
    
 2. Установка зависимостей:
     ```bash
