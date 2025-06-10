@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from materials.serializers import PaymentSerializer
+from .models import User
 
 
 class NewUserSerializer(serializers.ModelSerializer):
