@@ -1,15 +1,11 @@
 from django.urls import path
-from users.apps import UsersConfig
-from users.views import EmailLoginView, LogoutUserView, UserRegistrationView, email_verification, reg_success
+
+from . import views
+from .apps import UsersConfig
 
 app_name = UsersConfig.name
 
-
-
 urlpatterns = [
-    path('login/', EmailLoginView.as_view(template_name='login.html'), name='login'),
-    path('logout/', LogoutUserView.as_view(template_name='logout.html'), name='logout'),
-    path('registration/', UserRegistrationView.as_view(template_name='registration.html'), name='registration'),
-    path('users-confirm/<str:token>/', email_verification, name='users-confirm'),
-    path('users-success/', reg_success, name='users-success'),
+    path("users/", views.UserListCreateAPIView.as_view(), name="users"),
+    path("users/<int:pk>/", views.UserRetrieveUpdateDestroyAPIView.as_view(), name="user"),
 ]
