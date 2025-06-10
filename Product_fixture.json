@@ -3,26 +3,26 @@
     "model": "catalog.product",
     "pk": 1,
     "fields": {
-        "name": "iPhone 11 128",
-        "description": "",
-        "images": "",
+        "name": "iPhone 11 (2019)",
+        "description": "Дисплей: 6.1-дюймовый LCD Liquid Retina\r\nЧип: A13 Bionic\r\nКамера: Двойная камера (12 МП широкоугольная и ультраширокая)\r\nFace ID: Да\r\nОсобенности: Впервые предложен ночной режим, улучшенная производительность батареи.",
+        "images": "catalog/photo/iphone_11_fioletovyy.jpg",
         "category": 1,
         "purchase_price": 30000,
         "created_at": "2024-10-24",
-        "updated_at": "2024-10-23T21:43:11.669Z"
+        "updated_at": "2024-10-26T21:49:01.242Z"
     }
 },
 {
     "model": "catalog.product",
     "pk": 2,
     "fields": {
-        "name": "iPhone 13 128",
-        "description": "",
-        "images": "",
+        "name": "iPhone 12 (2020)",
+        "description": "Дисплей: 6.1-дюймовый Super Retina XDR OLED\r\nЧип: A14 Bionic (первая 5-нм архитектура Apple)\r\nКамера: Двойная камера с улучшенной ночной съемкой\r\n5G: Поддержка 5G\r\nОсобенности: Новый плоский дизайн с прямыми краями, поддержка MagSafe для аксессуаров и беспроводной зарядки.",
+        "images": "catalog/photo/iphone_11_fioletovyy_TflhnBK.jpg",
         "category": 1,
-        "purchase_price": 53000,
+        "purchase_price": 35000,
         "created_at": "2024-10-24",
-        "updated_at": "2024-10-23T21:44:11.197Z"
+        "updated_at": "2024-10-26T21:55:45.671Z"
     }
 },
 {
@@ -62,6 +62,58 @@
         "purchase_price": 33500,
         "created_at": "2024-10-24",
         "updated_at": "2024-10-23T22:02:49.308Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "iPhone 13 (2021)",
+        "description": "Дисплей: 6.1-дюймовый Super Retina XDR OLED\r\nЧип: A15 Bionic\r\nКамера: Улучшенная стабилизация изображения (сдвиг сенсора), улучшение ночного режима\r\nБатарея: Более емкая по сравнению с iPhone 12\r\nОсобенности: Уменьшенная \"челка\" (вырез под фронтальную камеру), улучшенная производительность и энергоэффективность.",
+        "images": "catalog/photo/iphone_11_fioletovyy_1gYaCmG.jpg",
+        "category": 1,
+        "purchase_price": 41000,
+        "created_at": "2024-10-27",
+        "updated_at": "2024-10-26T21:55:55.844Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+        "name": "iPhone 14 (2022)",
+        "description": "Дисплей: 6.1-дюймовый и 6.7-дюймовый варианты Super Retina XDR OLED\r\nЧип: A15 Bionic для стандартной версии, A16 Bionic для Pro\r\nКамера: Улучшенная ночная съемка, 48 МП для Pro-версии\r\nОсобенности: Dynamic Island (только для Pro), отказ от mini-версии, режим спутниковой связи SOS, новые цвета.",
+        "images": "catalog/photo/iphone_11_fioletovyy_Yvu1ehg.jpg",
+        "category": 1,
+        "purchase_price": 49000,
+        "created_at": "2024-10-27",
+        "updated_at": "2024-10-26T21:56:06.906Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+        "name": "iPhone 15 (2023)",
+        "description": "Дисплей: 6.1-дюймовый и 6.7-дюймовый OLED для стандартной и Pro-версий\r\nЧип: A16 Bionic для стандартной версии, A17 Pro для Pro-версии\r\nКамера: 48 МП основная камера для всех моделей, улучшенная портретная съемка\r\nОсобенности: Dynamic Island для всех моделей, переход с Lightning на USB-C, улучшение фото и видео возможностей, титановый корпус в Pro-версии.",
+        "images": "catalog/photo/iphone_11_fioletovyy_FHaJP9T.jpg",
+        "category": 1,
+        "purchase_price": 59999,
+        "created_at": "2024-10-27",
+        "updated_at": "2024-10-26T21:56:16.952Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+        "name": "iPhone 16 (2024)",
+        "description": "Чип: Предположительно новый A18 Bionic\r\nДисплей: Возможное увеличение дисплеев Pro до 6.3 и 6.9 дюймов\r\nКамера: Возможно, увеличение сенсора и добавление 5-кратного зума в Pro\r\nОсобенности: Вероятно, продолжение работы над камерами, улучшение производительности и энергопотребления, возможные инновации в дисплейных технологиях (например, безрамочный экран).",
+        "images": "catalog/photo/iphone_11_fioletovyy_8yJuVIr.jpg",
+        "category": 1,
+        "purchase_price": 74000,
+        "created_at": "2024-10-27",
+        "updated_at": "2024-10-26T21:56:23.955Z"
     }
 }
 ]

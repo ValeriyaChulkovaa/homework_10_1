@@ -1,31 +1,31 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView, DetailView, CreateView
 
+from catalog.forms import ProductForm
 from catalog.models import Product, ContactInfo
 
 
-def home(request):
-    latest_products = Product.objects.order_by('-created_at')[:5]
-
-    for product in latest_products:
-        print(product)
-
-    context = {'latest_products': latest_products}
-
-    return render(request, 'catalog/home.html', context)
+class IndexListView(ListView):
+    model = Product
+    template_name = 'catalog/index.html'
+    context_object_name = 'products'
 
 
-def contacts(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        phone = request.POST.get('phone')
-        message = request.POST.get('message')
-        return HttpResponse('Данные успешно отправлены!')
+class ContactsListView(ListView):
+    model = ContactInfo
+    template_name = 'catalog/contacts.html'
+    context_object_name = 'contact_info'
 
-    contact_info = ContactInfo.objects.all()
 
-    context = {
-        'contact_info': contact_info,
-    }
+class ProductDetailsView(DetailView):
+    model = Product
+    template_name = 'catalog/product_details.html'
+    context_object_name = 'products'
 
-    return render(request, 'catalog/contacts.html', context)
+
+class AddProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+    template_name = 'catalog/add_product.html'
+
+    def get_success_url(self):
+        return f'/product_details/{self.object.pk}/'
