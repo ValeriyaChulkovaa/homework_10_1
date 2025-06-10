@@ -36,6 +36,12 @@
                 </div>
 
                 <div class="mb-3">
+                    {{ form.is_published.label_tag }}
+                    {{ form.is_published }}
+                    {{ form.is_published.errors }}
+                </div>
+
+                <div class="mb-3">
                     {{ form.purchase_price.label_tag }}
                     {{ form.purchase_price }}
                     {{ form.purchase_price.errors }}

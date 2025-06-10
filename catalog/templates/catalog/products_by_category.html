@@ -1,0 +1,27 @@
+{% extends 'catalog/base.html' %}
+{% load my_tag %}
+
+{% block title %}Продукты категории {{ category_name }}{% endblock %}
+
+{% block content %}
+<div class="mt-4 mb-4 me-4" style="width: 18rem: auto;">
+    <h1>Продукты в категории: {{ category_name }}</h1>
+
+    {% if category_exists %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    <h3>{{ product.name }}</h3>
+                    <div class="mt-2">
+                        <p>{{ product.description|truncatechars:50 }}</p>
+                        <p>Цена: {{ product.purchase_price }} RUB</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>В этой категории нет товаров или категория не существует.</p>
+    {% endif %}
+</div>
+
+{% endblock %}
