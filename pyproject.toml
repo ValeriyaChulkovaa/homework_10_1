@@ -2,7 +2,7 @@
 name = "djangohomeworkone"
 version = "0.1.0"
 description = ""
-authors = ["Dmitry Yakushin <yakushin.dima8@gmail.com>"]
+authors = ["Valeriya <chulkovav66@mail.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
