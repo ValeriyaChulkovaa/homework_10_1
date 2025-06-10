@@ -25,21 +25,20 @@
         <div class="col-lg-9 col-md-6 col-sm-12">
             <div class="card mb-4 box-shadow">
                 <div class="card-body">
-                    {% if contact_info %}
-                        <ul>
-                        {% for contact in contact_info %}
-                            <li>
-                                <p><strong>Имя:</strong> {{ contact.name }}</p>
-                                <p><strong>Номер телефона:</strong> {{ contact.phone }}</p>
-                                <p><strong>Email:</strong> {{ contact.email }}</p>
-                                <p><strong>Адрес:</strong> {{ contact.address }}</p>
-                            </li>
-                            <hr>
-                        {% endfor %}
-                        </ul>
-                    {% else %}
-                        <p>Контактная информация отсутствует.</p>
-                    {% endif %}
+                    <table class="table table-striped">
+                        <tr>
+                            <td class="w-25">Страна</td>
+                            <td>USA</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">ИНН</td>
+                            <td>91-1144442</td>
+                        </tr>
+                        <tr>
+                            <td class="w-25">Адрес</td>
+                            <td>Redmond,WA,98052-6399</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
