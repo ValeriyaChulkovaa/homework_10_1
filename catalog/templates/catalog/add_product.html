@@ -14,38 +14,43 @@
                 <div class="mb-3">
                     {{ form.name.label_tag }}
                     {{ form.name }}
-                    {{ form.name.errors }}
                 </div>
 
                 <div class="mb-3">
                     {{ form.description.label_tag }}
                     {{ form.description }}
-                    {{ form.description.errors }}
                 </div>
 
                 <div class="mb-3">
                     {{ form.images.label_tag }}
                     {{ form.images }}
-                    {{ form.images.errors }}
                 </div>
 
                 <div class="mb-3">
                     {{ form.category.label_tag }}
                     {{ form.category }}
-                    {{ form.category.errors }}
-                </div>
-
-                <div class="mb-3">
-                    {{ form.is_published.label_tag }}
-                    {{ form.is_published }}
-                    {{ form.is_published.errors }}
                 </div>
 
                 <div class="mb-3">
                     {{ form.purchase_price.label_tag }}
                     {{ form.purchase_price }}
-                    {{ form.purchase_price.errors }}
                 </div>
+
+
+                {% if messages %}
+                    <div id="notification" class="alert alert-success">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                    <script>
+                        setTimeout(function() {
+                            document.getElementById('notification').style.display = 'none';
+                            window.location.href = "{% url 'catalog:index' %}"; // Замените на нужный вам URL
+                        }, 3000); // 3000 мс = 3 секунды
+                    </script>
+                {% endif %}
+
 
 
                 <button type="submit" class="btn btn-primary">Сохранить</button>

@@ -5,29 +5,16 @@
 
 {% block content %}
 
-<div class="d-flex flex-wrap justify-content-center">
+<div class="d-flex flex-wrap justify-content-start">
     {% for product in products %}
-
-        {% if product.is_published or request.user|in_group:"Модератор продуктов" or request.user.is_superuser %}
-            <div class="card mt-4 mb-4 me-4" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">{{ product }}</h5>
-
-                {% if request.user|in_group:"Модератор продуктов" or request.user.is_superuser %}
-                    {% if product.is_published %}
-                        <h6 style="color: green;">(Опубликован)</h6>
-                    {% else %}
-                        <h6 style="color: red;">(Не опубликован)</h6>
-                    {% endif %}
-
-                {% endif %}
-                <h6 class="card-subtitle mb-2 text-body-secondary">Цена {{ product.purchase_price }} ₽</h6>
-                <p class="card-text">{{ product.description|truncatechars:50 }}</p>
-                <a href="{% url 'catalog:product_details' product.pk  %}" class="btn btn-sm btn-secondary d-block mx-auto">Посмотреть</a>
-              </div>
-            </div>
-        {% else %}
-        {% endif %}
+    <div class="card mt-4 mb-4 me-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ product }}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Цена {{ product.purchase_price }} ₽</h6>
+        <p class="card-text">{{ product.description|truncatechars:50 }}</p>
+        <a href="{% url 'catalog:product_details' product.pk  %}" class="btn btn-sm btn-secondary">Посмотреть</a>
+      </div>
+    </div>
     {% endfor %}
 </div>
 
