@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from catalog.forms import ProductFormValidator
@@ -22,7 +23,7 @@ class ProductDetailsView(DetailView):
     context_object_name = 'products'
 
 
-class AddProductCreateView(CreateView):
+class AddProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductFormValidator
     template_name = 'catalog/add_product.html'
@@ -41,7 +42,7 @@ class AddProductCreateView(CreateView):
         return super().form_invalid(form)
 
 
-class EditProductUpdateView(UpdateView):
+class EditProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductFormValidator
     context_object_name = 'products'
@@ -51,7 +52,7 @@ class EditProductUpdateView(UpdateView):
         return f'/product_details/{self.object.pk}/'
 
 
-class DeleteProductDeleteView(DeleteView):
+class DeleteProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     template_name = 'catalog/delete_product.html'
     success_url = '/'

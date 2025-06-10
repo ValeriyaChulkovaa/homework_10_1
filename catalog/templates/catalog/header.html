@@ -14,23 +14,39 @@
           <li class="nav-item">
             <a class="nav-link" href="/contacts/">Контакты</a>
           </li>
+          {% if user.is_authenticated %}
           <li class="nav-item me-4">
             <a class="nav-link" href="/add/">Добавить продукт</a>
           </li>
-          <hr class="me-4" style="border: none; border-left: 2px solid white; height: 10px;"/>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link" href="/blog/">Блог</a>
           </li>
+          {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link me-4" href="/blog/add_post">Добавить пост</a>
           </li>
-          <hr class="me-4" style="border: none; border-left: 2px solid white; height: 10px;"/>
+          {% endif %}
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="{% url 'users:login' %}">Вход</a>-->
+<!--          </li>-->
+          {% if user.is_authenticated %}
           <li class="nav-item">
-            <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalSignin">
-                Вход
-            </button>
-            {% include 'catalog/sing_up.html' %}
+<!--            <a href="{% url 'users:logout' %}" class="nav-link me-4">Выйти</a>-->
+            <form method="post" action="{% url 'users:logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="nav-link">Выйти</button>
+            </form>
           </li>
+          {% else %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'users:login' %}">Вход</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'users:registration' %}">Регистрация</a>
+          </li>
+          {% endif %}
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
