@@ -1,30 +1,38 @@
-from django.db import models
+from rest_framework import serializers
+
+from .models import Course, Lesson
 
 
-class Course(models.Model):
-    name = models.CharField(max_length=150, verbose_name="Название")
-    preview = models.ImageField(upload_to="materials/courses/previews/", blank=True, null=True)
-    description = models.TextField(verbose_name="Описание", blank=True, null=True)
+class LessonSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Lesson
+        fields = "__all__"
+
+
+class CourseSerializer(serializers.ModelSerializer):
+    lessons_count = serializers.SerializerMethodField()
+    course_lessons = LessonSerializer(source="lessons", many=True)
 
     class Meta:
-        verbose_name = "Курс"
-        verbose_name_plural = "Курсы"
+        model = Course
+        fields = "__all__"
 
-    def __str__(self):
-        return self.name
+    def get_lessons_count(self, obj):
+        """
+        Подсчет количества уроков в курсе
+        """
+        return Lesson.objects.filter(course=obj).count()
+
+    def get_course_lessons(self, obj):
+        """
+        Список уроков в курсе
+        """
+        return [lesson.id for lesson in Lesson.objects.filter(course=obj)]
 
 
-class Lesson(models.Model):
-    name = models.CharField(max_length=150, verbose_name="Название")
-    preview = models.ImageField(upload_to="materials/courses/previews/", blank=True, null=True)
-    description = models.TextField(verbose_name="Описание", blank=True, null=True)
-    video_link = models.TextField(verbose_name="Ссылка на видео", blank=True, null=True)
-    course = models.ForeignKey(Course, on_delete=models.PROTECT, verbose_name="Курс", null=True, blank=True,
-                               related_name="lessons")
-
-    class Meta:
-        verbose_name = "Урок"
-        verbose_name_plural = "Уроки"
-
-    def __str__(self):
-        return self.name
+class StaffCourseSerializer(CourseSerializer):
+    """
+    Сериализатор для модели Course, отображающийся модератору и админу
+    """
+    lessons_count = serializers.SerializerMethodField()
+    course_lessons = LessonSerializer(source="lessons", many=True, read_only=True)

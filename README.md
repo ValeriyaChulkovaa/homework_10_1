@@ -52,7 +52,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   https://github.com/ValeriyaChulkovaa/homework_10_1
+   git clone https://github.com/ValeriyaChulkovaa/homework_10_1
    ```
 
 2. Создайте и заполните файл `.env` с необходимыми данными (например, ключи для JWT).
