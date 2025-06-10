@@ -1,0 +1,37 @@
+{% extends 'catalog/base.html' %}
+{% load my_tag %}
+
+{% block title %}Блог{% endblock %}
+
+{% block content %}
+
+<!--<div class="d-flex flex-wrap justify-content-start">-->
+    {% if posts %}
+        {% for post in posts %}
+            {% if post.is_published %}
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="card mt-4 mb-4 me-4" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="{{ post.preview | media_filter }}" class="card-img-top d-block mx-auto" alt="Тут изображение" style="width: auto; height: 100px;">
+                            <h5 class="card-title text-center mt-2">Заголовок: {{ post.title }}</h5>
+<!--                            <p class="card-text text-center">{{ post }}</p>-->
+                            <hr>
+                            <h5 class="card-text text-center">Дата создания</h5>
+                            <p class="card-text text-center">{{ post.created_at }}</p>
+                            <hr>
+                            <p class="card-text text-center">Количество просмотров {{ post.views_count }}</p>
+                            <hr>
+                            <a href="{% url 'blog:blog_detail' post.pk %}" class="btn btn-sm btn-secondary d-block mx-auto ">Посмотреть</a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="mt-4 mb-4 me-4 align-item-center text-center" style="width: auto;">
+                <h2 class="card-title text-center mt-5">Публикаций нет</h2>
+                <hr>
+                <a href="{% url 'catalog:index' %}" class="btn btn-sm btn-secondary">Назад</a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
