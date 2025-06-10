@@ -1,96 +1,17 @@
-
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-
-from catalog.forms import ProductFormValidator
-from catalog.models import Product, ContactInfo
+from django.shortcuts import render
+from django.http import HttpResponse
 
 
-class IndexListView(ListView):
-    model = Product
-    template_name = 'catalog/index.html'
-    context_object_name = 'products'
-    permission_required = 'catalog.view_product'
+def home(request):
+    return render(request, 'catalog/home.html')
 
 
-
-class ContactsListView(ListView):
-    model = ContactInfo
-    template_name = 'catalog/contacts.html'
-    context_object_name = 'contact_info'
-
-
-class ProductDetailsView(LoginRequiredMixin, DetailView):
-    model = Product
-    template_name = 'catalog/product_details.html'
-    context_object_name = 'products'
-    permission_required = 'catalog.view_product'
+def contacts(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
 
 
-class AddProductCreateView(LoginRequiredMixin, CreateView):
-    model = Product
-    template_name = 'catalog/add_product.html'
-    permission_required = 'catalog.add_product'
-    form_class = ProductFormValidator
-
-
-    def get_success_url(self):
-        return f'/product_details/{self.object.pk}/'
-
-    def form_valid(self, form):
-        form.instance.owner = self.request.user
-        return super().form_valid(form)
-
-    def form_invalid(self, form):
-        # Обработка ошибок формы
-        print("Ошибки формы:", form.errors)  # Отладка
-        return super().form_invalid(form)
-
-
-class EditProductUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Product
-    form_class = ProductFormValidator
-    context_object_name = 'products'
-    template_name = 'catalog/edit_product.html'
-    permission_required = 'catalog.change_product'
-
-    def get_success_url(self):
-        return f'/product_details/{self.object.pk}/'
-
-    def test_func(self):
-        """Проверка является ли пользователь владельцем продукта"""
-        product = self.get_object()
-        user = self.request.user
-        return user == product.owner or user.groups.filter(name='Модератор продуктов').exists() or user.is_superuser
-
-    def handle_no_permission(self):
-        """Обработка отказа в доступе"""
-        from django.http import HttpResponseForbidden
-        return HttpResponseForbidden("Вы не являетесь владельцем этого продукта")
-
-    # def get_queryset(self):
-    #     """Фильтрует продукты только для текущего пользователя"""
-    #     return Product.objects.filter(owner=self.request.user)
-
-    # def get_queryset(self):
-    #     if not self.request.user.has_perm('catalog.change_product'):
-    #         return Product.objects.none()
-    #     return Product.objects.all()
-
-class DeleteProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Product
-    template_name = 'catalog/delete_product.html'
-    success_url = '/'
-    context_object_name = 'products'
-    permission_required = 'catalog.delete_product'
-
-    def test_func(self):
-        """Проверка является ли пользователь владельцем продукта"""
-        product = self.get_object()
-        user = self.request.user
-        return user == product.owner or user.groups.filter(name='Модератор продуктов').exists() or user.is_superuser
-
-    def handle_no_permission(self):
-        """Обработка отказа в доступе"""
-        from django.http import HttpResponseForbidden
-        return HttpResponseForbidden("Вы не являетесь владельцем этого продукта")
+        return HttpResponse('Данные успешно отправлены!')
+    return render(request, 'catalog/contacts.html')
