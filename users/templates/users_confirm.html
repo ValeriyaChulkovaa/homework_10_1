@@ -1,0 +1,15 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}Подтвердите почту{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2>Вам пришло письмо, проверьте почту</h2>
+    <p>Если вы не получили письмо, пожалуйста, проверьте спам или попробуйте заново.</p>
+
+    <a href="{% url 'users:login' %}" class="btn btn-primary">Войти</a>
+
+</div>
+
+{% endblock %}
